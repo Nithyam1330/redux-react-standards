@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import { UsersStaticConfig } from "./UsersStaticConfig";
 import { getErrorMessage, getLoadingStatus, GetUsersList } from "./UsersSelector";
 const mapStateToProps = (state: any, ownProps: any) => {
-    console.log({...state});
     return {
         ...UsersStaticConfig,
         users: GetUsersList({...state.userReducer}),
@@ -12,10 +11,5 @@ const mapStateToProps = (state: any, ownProps: any) => {
     }
 }
 
-const mapDispatchToProps = (dispatch: any) => {
-    return {
 
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Users)
+export default connect(mapStateToProps)(Users)
