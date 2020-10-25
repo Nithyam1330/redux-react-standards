@@ -3,7 +3,8 @@ export interface IUsersPage {
     users: IUser[],
     error: string,
     heading: string,
-    subTitle: string
+    subTitle: string,
+    fetchData?:Function
 }
 
 export interface IUser {

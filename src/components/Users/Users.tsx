@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
 import { Card, Alert, Badge } from 'react-bootstrap';
-import { getUserDetail } from '../../services/Users/UserService';
 import { convertToUpperCase } from '../../Utils/Utils';
 import { IUsersPage } from './Users.interface';
 
 function Users(props: IUsersPage) {
+    const {fetchData} = {...props};
     useEffect(() => {
-        getUserDetail();
+        fetchData && fetchData()
     }, [])
     return (
         <div>
