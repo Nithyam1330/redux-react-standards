@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import { UsersStaticConfig } from "./UsersStaticConfig";
 import { getErrorMessage, getLoadingStatus, GetUsersList } from "./UsersSelector";
 import { getUserDetail } from "../../redux/Users/UserThunk";
+import { fetchUsersRequestAction } from "../../redux/Users/UserActions";
 const mapStateToProps = (state: any, ownProps: any) => {
     return {
         ...UsersStaticConfig,
@@ -12,9 +13,9 @@ const mapStateToProps = (state: any, ownProps: any) => {
     }
 }
 
-const mapDispatchToProps = (dispatch: any) => {
+const mapDispatchToProps = (dispatch: any, ownProps: any) => {
     return {
-        fetchData: () => dispatch(getUserDetail())
+        fetchData: () => dispatch(fetchUsersRequestAction())
     }
 }
 

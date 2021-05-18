@@ -26,7 +26,7 @@ function Users(props: IUsersPage) {
                                 <Card.Title className="text-uppercase">{convertToUpperCase(user.title)}</Card.Title>
                                 <Card.Text>
                                     Status {user.completed ? 
-                                    <Badge variant="success">Completed</Badge> : <Badge variant="danger">Completed</Badge>}
+                                    <Badge variant="success">Completed</Badge> : <Badge variant="danger">Not completed</Badge>}
                                 </Card.Text>
                             </Card.Body>
                         </Card>

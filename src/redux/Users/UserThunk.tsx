@@ -27,3 +27,8 @@ export const getUserDetailPromise = () => {
         })
     }
 }
+
+export const getUserDetailAPI = async () => {
+    const response: any = await http.get('https://jsonplaceholder.typicode.com/todos')
+    return response.data;
+}

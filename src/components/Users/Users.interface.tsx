@@ -1,8 +1,8 @@
 export interface IUsersPage {
-    loading: boolean,
+    loading: boolean, // API calls
     users: IUser[],
     error: string,
-    heading: string,
+    heading: string, // Hard corded values
     subTitle: string,
     fetchData?:Function
 }
